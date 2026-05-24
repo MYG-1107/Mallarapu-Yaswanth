@@ -146,6 +146,21 @@ h2 {
   color: var(--muted);
 }
 
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 0;
+}
+
+.badge {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+}
+
 .cta-group {
   display: flex;
   flex-wrap: wrap;
@@ -186,6 +201,11 @@ h2 {
   border-radius: 999px;
 }
 
+.skills-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .grid {
   display: grid;
   gap: 1rem;
@@ -214,6 +234,18 @@ h2 {
 .timeline li {
   border-left: 3px solid var(--primary);
   padding-left: 0.9rem;
+}
+
+.stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.list {
+  padding-left: 1.2rem;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
 }
 
 .contact-list {
@@ -271,5 +303,9 @@ h2 {
 
   .grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

@@ -1,6 +1,6 @@
 # Mallarapu Yaswanth Portfolio
 
-Modern, responsive, SEO-focused single-page portfolio website.
+Modern, responsive, SEO-focused single-page portfolio website built from resume data.
 
 ## Structure
 
@@ -21,58 +21,48 @@ text/
 
 ## Customize
 
-1. Open `index.html`.
-2. Replace placeholders in:
-   - About
-   - Skills
-   - Projects
-   - Education & Achievements
-   - Contact email
-3. Add your images in `assets/images/`:
+1. Open `index.html` and replace all placeholder links:
+   - GitHub, LinkedIn, Credly, HackerRank, Duolingo, HackerEarth
+   - Project links marked as “Add live link”
+2. Update the canonical URL, Open Graph URL/image, and Twitter image URLs to match your deployment.
+3. Add images in `assets/images/`:
    - `profile.jpg` (recommended 600x600)
    - `og-cover.jpg` (recommended 1200x630)
-4. Update all canonical/OG URLs if deployment URL changes.
-5. Update JSON-LD schema values for complete personal data.
+4. Update JSON-LD schema values (location, sameAs, job title, and profile URLs).
+5. Optionally add a resume PDF to `assets/` and link it in the hero section.
 
 ## SEO Checklist
 
-- [x] Unique title with keyword: **Mallarapu Yaswanth**
-- [x] Meta description with job title and intent keywords
-- [x] Canonical URL
-- [x] Open Graph tags
-- [x] Twitter card tags
-- [x] JSON-LD (`Person`, `CreativeWork`)
-- [x] Semantic HTML5 sections (`header`, `main`, `section`, `footer`)
-- [x] Heading hierarchy
+- [x] Full name in title, H1, meta description, JSON-LD
+- [x] Canonical URL and Open Graph tags
+- [x] Twitter card metadata
+- [x] JSON-LD `Person` + `WebSite`
+- [x] Semantic HTML5 sections
+- [x] Heading hierarchy and accessible navigation
 - [x] `robots.txt` and `sitemap.xml`
-- [x] Accessibility basics (skip link, ARIA labels, link text)
+- [x] Mobile-first responsive CSS
 
 ## Deploy
 
 ### GitHub Pages
 1. Push repository to GitHub.
-2. In GitHub, open **Settings → Pages**.
-3. Set source branch and root folder (or `/text` if deploying this folder).
+2. Go to **Settings → Pages**.
+3. Set the source branch and set the folder to `/text`.
 4. Save and wait for publishing.
 
 ### Netlify
 1. Import the repository into Netlify.
-2. Set publish directory to `text`.
+2. Set the publish directory to `text`.
 3. Deploy.
 
 ### Vercel
-1. Import project in Vercel.
-2. Set output directory to `text`.
+1. Import the project in Vercel.
+2. Set the output directory to `text`.
 3. Deploy.
 
-## Name Ranking Tips
+## Ranking Tips
 
-1. Use your exact full name in:
-   - `<title>`
-   - `<h1>`
-   - meta description
-   - JSON-LD `Person.name`
-2. Add a custom domain (optional) and keep consistent profile links.
-3. Keep your LinkedIn and GitHub bios aligned with the same title keywords.
-4. Add backlinks from social profiles, resumes, and developer communities.
-5. Update projects regularly so search engines recrawl fresh content.
+1. Keep your full name consistent across the title, H1, and social profiles.
+2. Add backlinks from LinkedIn, GitHub, and resume PDFs.
+3. Update projects periodically to encourage re-indexing.
+4. Use a custom domain if possible and keep it consistent across profiles.

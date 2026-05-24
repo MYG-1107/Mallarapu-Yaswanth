@@ -16,7 +16,16 @@ if (menuToggle && siteNav) {
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme) {
   root.setAttribute("data-theme", savedTheme);
-  if (themeToggle) themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+  if (themeToggle) {
+    themeToggle.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+    themeToggle.setAttribute("aria-pressed", String(savedTheme === "dark"));
+  }
+} else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+  root.setAttribute("data-theme", "dark");
+  if (themeToggle) {
+    themeToggle.textContent = "☀️";
+    themeToggle.setAttribute("aria-pressed", "true");
+  }
 }
 
 if (themeToggle) {
@@ -26,6 +35,19 @@ if (themeToggle) {
     root.setAttribute("data-theme", next);
     localStorage.setItem("theme", next);
     themeToggle.textContent = next === "dark" ? "☀️" : "🌙";
+    themeToggle.setAttribute("aria-pressed", String(next === "dark"));
+  });
+}
+
+if (siteNav && menuToggle) {
+  const links = siteNav.querySelectorAll("a");
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (siteNav.classList.contains("open")) {
+        siteNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
   });
 }
 
